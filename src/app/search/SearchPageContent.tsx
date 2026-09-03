@@ -86,6 +86,9 @@ export default function SearchPageContent() {
         <Link href="/" className="text-sm font-semibold text-emerald-700">
           ← Bangladesh Constitution
         </Link>
+        <Link href="/ask" className="text-sm font-semibold text-violet-700">
+          Ask a Question →
+        </Link>
       </div>
 
       <div className="space-y-6">

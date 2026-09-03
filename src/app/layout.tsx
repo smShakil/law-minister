@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bangladesh Constitution Search",
+  title: "Bangladesh Constitution",
   description:
-    "Search the Constitution of the People's Republic of Bangladesh.",
+    "Search and ask questions about the Constitution of the People's Republic of Bangladesh.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

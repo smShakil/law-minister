@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { EmptySearchState } from "@/components/EmptySearchState";
@@ -26,19 +27,36 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Bangladesh Constitution
           </h1>
-          <p className="text-lg text-slate-600">Search the Constitution</p>
+          <p className="text-lg text-slate-600">
+            Search and ask questions about the Constitution
+          </p>
         </div>
 
         <SearchBar onSearch={handleSearch} />
 
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <Link
+            href="/search"
+            className="rounded-xl border border-emerald-200 bg-white px-5 py-3 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-50"
+          >
+            Open Search
+          </Link>
+          <Link
+            href="/ask"
+            className="rounded-xl bg-violet-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-800"
+          >
+            Ask a Question
+          </Link>
+        </div>
+
         <p className="max-w-xl text-sm leading-7 text-slate-500">
-          Search Articles, clauses, and provisions using deterministic keyword
-          search. No AI — just the authoritative constitutional text.
+          Use deterministic search for exact lookups, or ask a question to receive
+          a grounded AI explanation with cited constitutional sources.
         </p>
 
         <EmptySearchState
-          title="Try a search"
-          description='Enter a phrase like "freedom of speech", a topic like "personal liberty", or a direct reference like "Article 32".'
+          title="Try a search or question"
+          description='Search for "freedom of speech" or ask "What does Article 39 say?"'
         />
       </div>
     </main>
